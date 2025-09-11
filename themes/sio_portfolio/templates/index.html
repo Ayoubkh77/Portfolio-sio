@@ -20,19 +20,63 @@ _______________________________________________________________________________
 <!-- ------------------ -->
 
 <div class="text-center py-5 container">
-<div class="row">
+  <div class="row">
     <h1 class="h2">Découvrez mon portfolio BTS SIO</h1>
-   </div>
-   <div class="row">
-            </a>
-            <div class="col-4">
-               <img src="{{ SITEURL }}/theme/img/photo.png" alt="logo du portfolio" >
-            </div>
-    <p class="lead-4 mt-3 col">
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <img src="{{ SITEURL }}/theme/img/photo.png" alt="logo du portfolio" class="rounded-circle shadow" width="200">
+    </div>
+    <div class="col">
+      <p class="lead mt-3">
 Ce portfolio a pour objectif de présenter mon parcours de formation, et plus spécifiquement les compétences que j’ai développées dans le cadre du BTS SIO.
 Vous y trouverez une sélection de réalisations et d’activités (projets, travaux pratiques) ayant contribué à ma montée en compétences, ainsi qu’un aperçu de ma veille technologique.    </p>
+    </p>
     </div>
+  </div>
 </div>
+
+   <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+    <div class="col d-flex flex-column align-items-start gap-2">
+      <h2 class="fw-bold text-body-emphasis">Découvrez les fonctionnalités du portfolio</h2>
+      <p class="text-body-secondary">Explorez les différentes sections pour consulter mes réalisations, stages, projets scolaires, et bien plus encore.</p>
+      <a href="/pages/projets.html" class="btn btn-primary btn-lg">Voir mes projets</a>
+    </div>
+    <div class="col">
+      <div class="row row-cols-1 row-cols-sm-2 g-4">
+        <div class="col d-flex flex-column gap-2">
+          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+            <i class="bi bi-collection"></i>
+          </div>
+          <h4 class="fw-semibold mb-0 text-body-emphasis">Mes réalisations</h4>
+          <p class="text-body-secondary">Découvrez les projets et travaux effectués tout au long de ma formation.</p>
+        </div>
+        <div class="col d-flex flex-column gap-2">
+          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+            <i class="bi bi-gear-fill"></i>
+          </div>
+          <h4 class="fw-semibold mb-0 text-body-emphasis">Mes compétences</h4>
+          <p class="text-body-secondary">Un aperçu des compétences techniques et professionnelles acquises.</p>
+        </div>
+        <div class="col d-flex flex-column gap-2">
+          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+            <i class="bi bi-speedometer"></i>
+          </div>
+          <h4 class="fw-semibold mb-0 text-body-emphasis">Stages</h4>
+          <p class="text-body-secondary">Informations sur les stages réalisés en entreprise durant le BTS.</p>
+        </div>
+        <div class="col d-flex flex-column gap-2">
+          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
+            <i class="bi bi-table"></i>
+          </div>
+          <h4 class="fw-semibold mb-0 text-body-emphasis">Tableau de synthèse</h4>
+          <p class="text-body-secondary">Visualisez l’ensemble de mes activités classées selon les compétences visées.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
 
 <!-- Affichage des cards de navigation vers PARCOURS, REALISATION, VEILLE -->
  <div class="row text-center g-4">
@@ -50,4 +94,3 @@ Vous y trouverez une sélection de réalisations et d’activités (projets, tra
 {% endfor %}
 </div>
 
-{% endblock %}

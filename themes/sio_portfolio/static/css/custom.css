@@ -24,7 +24,7 @@ ______________________________________________
     */
 
     /* --navbar-brand-couleur: rgb(255, 166, 0); */
-    --nav-link: white;
+    --nav-link: black;
     --nav-link-active: rgb(255, 209, 5);
 
 
@@ -57,7 +57,7 @@ Définition du fond :
 --------------------
 */
 body {
-    background-image: url('../backgrounds/header_background.png');
+    background-image: url('../backgrounds/5578661.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /*contain*/ 
@@ -76,7 +76,7 @@ Définition du fond du header :
 */
 
 .background-header {
-    background-image: url('../backgrounds/header_background.png');
+    background-image: url('../backgrounds/5578661.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; /*contain*/ 
@@ -89,7 +89,12 @@ Couleur des éléments de navigations :
 
 .navbar {
     font-size: 0.8em;
+   
 }
+
+
+  
+
 
 .nav-link-icon {
     font-size: 1.5em;
@@ -127,3 +132,37 @@ Couleur des éléments de navigations :
 .navbar-toggler {
     background-color: rgba(255, 255, 255, 1);
 }
+<style>
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  border-top: 2px solid #007bff;
+  position: relative;
+}
+.timeline li {
+  position: relative;
+  padding-top: 1.5rem;
+  width: 30%;
+  text-align: center;
+}
+.timeline li::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  border: 3px solid white;
+  z-index: 1;
+}
+.timeline li p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+</style>
