@@ -9,88 +9,303 @@ _______________________________________________________________________________
 
 {% block title %}Accueil{% endblock %}
 
-
 {% block content %}
-<div class="text-center my-5">
-    <h1 class="display-1 fw-bold">KHENNOUCI AYOUB</h1>
-</div>
+<!-- Google Font Montserrat -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #002855, #004aad);
+    color: #f8f9fa;
+  }
 
-<!-- Texte d'accueil : -->
-<!-- ------------------ -->
+  .container-main {
+    max-width: 900px;
+    margin: 3rem auto 5rem;
+    padding: 0 1rem;
+  }
 
-<div class="text-center py-5 container">
-  <div class="row">
-    <h1 class="h2">Découvrez mon portfolio BTS SIO</h1>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-4">
-      <img src="{{ SITEURL }}/theme/img/photo.png" alt="logo du portfolio" class="rounded-circle shadow" width="200">
-    </div>
-    <div class="col">
-      <p class="lead mt-3">
-Ce portfolio a pour objectif de présenter mon parcours de formation, et plus spécifiquement les compétences que j’ai développées dans le cadre du BTS SIO.
-Vous y trouverez une sélection de réalisations et d’activités (projets, travaux pratiques) ayant contribué à ma montée en compétences, ainsi qu’un aperçu de ma veille technologique.    </p>
+  /* TITRE PRINCIPAL */
+  .main-title {
+    font-weight: 700;
+    font-size: 4.5rem;
+    text-align: center;
+    color: #ffa600;
+    text-shadow: 0 0 10px #ffa600aa;
+    margin-bottom: 0.3rem;
+    animation: glowPulse 4s ease-in-out infinite;
+  }
+
+  @keyframes glowPulse {
+    0%, 100% {
+      text-shadow: 0 0 10px #ffa600aa, 0 0 20px #ffa600cc, 0 0 30px #ffb72c;
+    }
+    50% {
+      text-shadow: 0 0 20px #ffb72c, 0 0 30px #ffa600ff, 0 0 40px #ffcc4d;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #c5cbe3;
+  }
+
+  /* GLASS EFFECT CONTAINER */
+  .glass-section {
+    background: rgba(255 255 255 / 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0 0 0 / 0.2);
+    padding: 3rem 2.5rem;
+    margin-bottom: 4rem;
+    transition: background 0.3s ease;
+  }
+  .glass-section:hover {
+    background: rgba(255 255 255 / 0.15);
+  }
+
+  /* À PROPOS */
+  .about {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+  .about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ffa600;
+    box-shadow: 0 0 15px #ffa600bb;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  .about img:hover {
+    transform: scale(1.05);
+  }
+
+  .about p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #e0e6f5;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid #ffa600;
+    color: #fff5d1;
+  }
+
+  .timeline-item {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    padding: 0 0.8rem;
+  }
+  .timeline-item strong {
+    font-size: 1.6rem;
+    color: #ffa600;
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  .timeline-item p {
+    font-weight: 500;
+  }
+  .timeline-item::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #ffa600;
+    border: 3px solid #fff9e6;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #ffa600cc;
+  }
+
+  /* COMPÉTENCES BADGES */
+  .skills {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .skills .badge {
+    background: #0d6efd;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.65rem 1.3rem;
+    border-radius: 50px;
+    box-shadow: 0 0 8px #0d6efdaa;
+    transition: background 0.3s ease, transform 0.3s ease;
+    cursor: default;
+  }
+  .skills .badge:hover {
+    background: #ffa600;
+    color: #222;
+    transform: scale(1.15);
+    box-shadow: 0 0 20px #ffa600cc;
+  }
+
+  /* BOUTON CV */
+  .btn-cv {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 1rem 2.7rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #222;
+    background: #ffa600;
+    border-radius: 50px;
+    box-shadow: 0 0 25px #ffa600bb;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.35s ease, transform 0.3s ease;
+    text-decoration: none;
+  }
+  .btn-cv:hover, .btn-cv:focus {
+    background: #ffb933;
+    box-shadow: 0 0 35px #ffb933cc;
+    transform: scale(1.05);
+    color: #222;
+    outline: none;
+  }
+
+  /* CITATION */
+  blockquote {
+    font-style: italic;
+    color: #fff1b2;
+    font-size: 1.25rem;
+    margin-top: 3rem;
+    border-left: 4px solid #ffa600;
+    padding-left: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* LIENS SOCIAUX */
+  .social-links {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+  .social-links a {
+    color: #ffa600;
+    font-size: 2rem;
+    margin: 0 1.2rem;
+    transition: color 0.3s ease;
+  }
+  .social-links a:hover, .social-links a:focus {
+    color: #fff;
+    outline: none;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .main-title {
+      font-size: 3.5rem;
+    }
+    .subtitle {
+      font-size: 1.3rem;
+    }
+    .timeline {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .timeline-item {
+      width: 100%;
+      padding: 0;
+    }
+    blockquote {
+      max-width: 90%;
+    }
+  }
+</style>
+
+<div class="container-main">
+
+  <!-- TITRE -->
+  <h1 class="main-title">KHENNOUCI AYOUB</h1>
+  <p class="subtitle">Découvrez mon portfolio BTS SIO</p>
+
+  <!-- SECTION À PROPOS -->
+  <section class="glass-section about" aria-label="À propos de moi">
+    <img src="{{ SITEURL }}/theme/img/photo-profil.jpg" alt="Photo de Ayoub Khennouci" />
+    <p>
+      Étudiant passionné par le développement web, la cybersécurité et l'innovation technologique. Curieux, autonome et rigoureux, je cherche à intégrer une équipe où je pourrai continuer à apprendre et relever de vrais défis techniques.
     </p>
-    </div>
-  </div>
-</div>
 
-   <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
-    <div class="col d-flex flex-column align-items-start gap-2">
-      <h2 class="fw-bold text-body-emphasis">Découvrez les fonctionnalités du portfolio</h2>
-      <p class="text-body-secondary">Explorez les différentes sections pour consulter mes réalisations, stages, projets scolaires, et bien plus encore.</p>
-      <a href="/pages/projets.html" class="btn btn-primary btn-lg">Voir mes projets</a>
-    </div>
-    <div class="col">
-      <div class="row row-cols-1 row-cols-sm-2 g-4">
-        <div class="col d-flex flex-column gap-2">
-          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-            <i class="bi bi-collection"></i>
-          </div>
-          <h4 class="fw-semibold mb-0 text-body-emphasis">Mes réalisations</h4>
-          <p class="text-body-secondary">Découvrez les projets et travaux effectués tout au long de ma formation.</p>
-        </div>
-        <div class="col d-flex flex-column gap-2">
-          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-            <i class="bi bi-gear-fill"></i>
-          </div>
-          <h4 class="fw-semibold mb-0 text-body-emphasis">Mes compétences</h4>
-          <p class="text-body-secondary">Un aperçu des compétences techniques et professionnelles acquises.</p>
-        </div>
-        <div class="col d-flex flex-column gap-2">
-          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-            <i class="bi bi-speedometer"></i>
-          </div>
-          <h4 class="fw-semibold mb-0 text-body-emphasis">Stages</h4>
-          <p class="text-body-secondary">Informations sur les stages réalisés en entreprise durant le BTS.</p>
-        </div>
-        <div class="col d-flex flex-column gap-2">
-          <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-            <i class="bi bi-table"></i>
-          </div>
-          <h4 class="fw-semibold mb-0 text-body-emphasis">Tableau de synthèse</h4>
-          <p class="text-body-secondary">Visualisez l’ensemble de mes activités classées selon les compétences visées.</p>
-        </div>
+    <!-- TIMELINE -->
+    <div class="timeline" aria-label="Chronologie de formation et projets">
+      <div class="timeline-item">
+        <strong>2023</strong>
+        <p>Entrée en BTS SIO</p>
+      </div>
+      <div class="timeline-item">
+        <strong>2024</strong>
+        <p>Stage en entreprise</p>
+      </div>
+      <div class="timeline-item">
+        <strong>2025</strong>
+        <p>Projet de fin d’année</p>
       </div>
     </div>
+
+    <!-- COMPÉTENCES -->
+    <div class="skills" aria-label="Compétences techniques">
+      <span class="badge" title="HTML5">HTML</span>
+      <span class="badge" title="CSS3">CSS</span>
+      <span class="badge" title="Python">Python</span>
+      <span class="badge" title="SQL">SQL</span>
+    </div>
+
+    <!-- BOUTON CV -->
+    <a href="/cv.pdf" class="btn-cv" target="_blank" rel="noopener">
+      <i class="fas fa-download me-1"></i> Télécharger mon CV
+    </a>
+
+    <!-- CITATION -->
+    <blockquote>
+      <p>"Le succès n’est pas la clé du bonheur. Le bonheur est la clé du succès."</p>
+    </blockquote>
+
+    <!-- LIENS SOCIAUX -->
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/ayoub-khennouci" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/ayoub-khennouci" target="_blank" rel="noopener" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+  <div class="text-center py-5">
+    <h2 class="mb-4">Bienvenue sur mon portfolio</h2>
+    <p class="lead mx-auto" style="max-width: 600px;">
+      Ce portfolio présente mon parcours de formation, mes projets, ainsi que mes compétences en développement web, cybersécurité et innovation technologique.
+    </p>
   </div>
-</div>
-{% endblock %}
 
-<!-- Affichage des cards de navigation vers PARCOURS, REALISATION, VEILLE -->
- <div class="row text-center g-4">
-{% for nom, url, icone, sousNav, description, couleur in MAINITEMS %}
-    <div class="col-md-4">
-        <div class="card shadow-sm h-100">
-            <div class="card-body">
-                <i class="bi bi-{{ icone }} display-5 mb-3 text-{{ couleur }}"></i>
-                <h5 class="card-title">{{ nom }}</h5>
-                <p class="card-text">{{ description }}</p>
-                <a href="{{ SITEURL }}{{ url }}" class="btn btn-outline-{{ couleur }}">Voir</a>
-            </div>
-        </div>
-    </div>    
-{% endfor %}
-</div>
-
+  <!-- FONCTIONNALITÉS -->
+  <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+    <div class="col d-flex flex-column align-items-start gap-2">
+      <h2 class="fw-bold text-warning">Découvrez les fonctionnalités du portfolio</h2>
+      <p class="text-light">Explorez les différentes sections pour consulter mes réalisations, stages, projets scolaires, et bien plus encore.</p>
+      <a href="/pages/projets.html" class="btn btn-warning btn-lg">Voir mes projets</a>
+    </div>
+    <div class="col">
+      <div class="row row-cols-1 row-cols-sm-2 g-
