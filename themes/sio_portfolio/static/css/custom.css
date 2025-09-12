@@ -231,3 +231,204 @@ PROPRIETES SUR LE HEADER & NAVBAR :
 .fade-in-up.delay-3 {
   --delay: 0.9s;
 }
+/* === ANIMATION FADE IN UP === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-delay: var(--delay, 0s);
+}
+
+.delay-0 { --delay: 0s; }
+.delay-1 { --delay: 0.3s; }
+.delay-2 { --delay: 0.6s; }
+.delay-3 { --delay: 0.9s; }
+.delay-4 { --delay: 1.2s; }
+.delay-5 { --delay: 1.5s; }
+
+/* === SURVOL IMAGE === */
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* === GLASS EFFECT (fond flouté) === */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* === NAVBAR FIXÉE === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+}
+/* NAVBAR - verre dépoli clair, très transparent, adapté fond clair */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 {
+  background: rgba(255, 255, 255, 0.3); /* fond blanc très transparent */
+  backdrop-filter: blur(20px);          /* fort flou pour effet glass */
+  -webkit-backdrop-filter: blur(20px); /* Safari */
+  border-right: 1px solid rgba(0, 0, 0, 0.1); /* bordure subtile sombre */
+  color: #1e293b;                       /* texte sombre, lisible */
+  transition: background-color 0.3s ease;
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Liens */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.nav-link {
+  color: #334155; /* gris foncé */
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Survol liens */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.nav-link:hover,
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.nav-link:focus {
+  color: #0ea5e9; /* bleu vif */
+  text-decoration: none;
+}
+
+/* Titres */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .fs-4,
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 strong {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+/* Dropdown menu */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .dropdown-menu {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #334155;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Dropdown item hover */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .dropdown-menu .dropdown-item:hover,
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .dropdown-menu .dropdown-item:focus {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+/* Icônes */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .nav-link-icon {
+  color: #0284c7;
+  transition: color 0.3s ease;
+}
+
+/* Icônes au survol */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.nav-link:hover .nav-link-icon,
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.nav-link:focus .nav-link-icon {
+  color: #0ea5e9;
+}
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 {
+  background: rgba(255, 255, 255, 0.15) !important; /* blanc très transparent */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.25) !important; /* bordure claire */
+  box-shadow: none !important;
+  color: #1e293b !important;
+}
+
+/* Au cas où le fond blanc vient d'une autre classe */
+.bg-body-tertiary {
+  background: transparent !important;
+}
+/* Fond glass transparent pour la navbar */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 {
+  background: rgba(255, 255, 255, 0.15) !important; /* blanc transparent */
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: none !important;
+  color: #ffffff !important; /* texte blanc */
+}
+
+/* Liens de la navbar - texte blanc */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Couleur au survol - bleu clair */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.nav-link:hover,
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.nav-link:focus {
+  color: #0ea5e9 !important; /* bleu clair vif */
+}
+
+/* Couleur du titre / Sidebar en blanc aussi */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.fs-4 {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+/* Dropdown menu texte - fond transparent et texte blanc */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .dropdown-menu {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(15px) !important;
+  color: #ffffff !important;
+}
+
+/* Dropdown items en blanc */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .dropdown-menu a.dropdown-item {
+  color: #ffffff !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover sur dropdown items */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .dropdown-menu a.dropdown-item:hover {
+  background-color: rgba(14, 165, 233, 0.25) !important;
+  color: #0ea5e9 !important;
+}
+body {
+  background: url('/chemin/vers/ton/fond-futuriste.jpg') no-repeat center center fixed;
+  background-size: cover;
+  /* Si tu veux un filtre fondu pour mieux voir le contenu */
+  /* Tu peux aussi ajouter un overlay dans le HTML */
+  color: white; /* Ajuste la couleur du texte */
+  font-family: 'Orbitron', sans-serif; /* Si tu utilises cette police */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+/* Forcer la transparence de la sidebar */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary {
+  background-color: rgba(0, 0, 0, 0.5) !important; /* fond noir transparent à 50% */
+  color: white !important;
+  backdrop-filter: blur(10px); /* effet flou glassmorphisme */
+  border-radius: 0 15px 15px 0;
+}
+
+/* Liens dans la navbar */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary a.nav-link {
+  color: white !important;
+}
+
+/* Hover sur les liens */
+.d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary a.nav-link:hover {
+  color: #38bdf8 !important; /* bleu clair au survol */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
