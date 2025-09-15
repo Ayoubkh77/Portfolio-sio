@@ -367,7 +367,7 @@ img:hover {
 
 /* Liens de la navbar - texte blanc */
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.nav-link {
-  color: #ffffff !important;
+  color: #000000 !important;
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -380,7 +380,7 @@ img:hover {
 
 /* Couleur du titre / Sidebar en blanc aussi */
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.fs-4 {
-  color: #ffffff !important;
+  color: #000000 !important;
   font-weight: 700;
 }
 
@@ -388,12 +388,12 @@ img:hover {
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .dropdown-menu {
   background: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(15px) !important;
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 /* Dropdown items en blanc */
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .dropdown-menu a.dropdown-item {
-  color: #ffffff !important;
+  color: #000000 !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -407,7 +407,7 @@ body {
   background-size: cover;
   /* Si tu veux un filtre fondu pour mieux voir le contenu */
   /* Tu peux aussi ajouter un overlay dans le HTML */
-  color: white; /* Ajuste la couleur du texte */
+  color: rgb(0, 0, 0); /* Ajuste la couleur du texte */
   font-family: 'Orbitron', sans-serif; /* Si tu utilises cette police */
   min-height: 100vh;
   margin: 0;
@@ -416,14 +416,14 @@ body {
 /* Forcer la transparence de la sidebar */
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary {
   background-color: rgba(0, 0, 0, 0.5) !important; /* fond noir transparent à 50% */
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
   backdrop-filter: blur(10px); /* effet flou glassmorphisme */
   border-radius: 0 15px 15px 0;
 }
 
 /* Liens dans la navbar */
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary a.nav-link {
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 /* Hover sur les liens */

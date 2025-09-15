@@ -10,8 +10,8 @@ Title: Parcours scolaire
       <div class="event-content">
         <h3>Baccalauréat Scientifique</h3>
         <span class="event-date">2019 - 2022</span>
-        <p><strong>Lycée Jean Jaurès, Paris</strong></p>
-        <p>Mention Bien. Spécialité Mathématiques et Physique-Chimie. Bases solides en logique et analyse.</p>
+        <p><strong>Lycée Mare Caree, Moissy Cramayel</strong></p>
+        <p>Mention Bien. Spécialité STI2D EE. Bases solides en logique et analyse.</p>
       </div>
     </div>
 
@@ -19,8 +19,8 @@ Title: Parcours scolaire
       <div class="event-marker"></div>
       <div class="event-content">
         <h3>BTS Services Informatiques aux Organisations (SIO)</h3>
-        <span class="event-date">2023 - 2025 (en cours)</span>
-        <p><strong>IUT de Créteil</strong></p>
+        <span class="event-date">2022 - 2023 </span>
+        <p><strong>IUT de SENART</strong></p>
         <p>Spécialisation en développement, cybersécurité et gestion de projets. Plusieurs projets professionnels réalisés.</p>
       </div>
     </div>

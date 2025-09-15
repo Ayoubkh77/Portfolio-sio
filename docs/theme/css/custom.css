@@ -367,7 +367,7 @@ img:hover {
 
 /* Liens de la navbar - texte blanc */
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.nav-link {
-  color: #ffffff !important;
+  color: #000000 !important;
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -380,7 +380,7 @@ img:hover {
 
 /* Couleur du titre / Sidebar en blanc aussi */
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 a.fs-4 {
-  color: #ffffff !important;
+  color: #000000 !important;
   font-weight: 700;
 }
 
@@ -388,12 +388,12 @@ img:hover {
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .dropdown-menu {
   background: rgba(255, 255, 255, 0.15) !important;
   backdrop-filter: blur(15px) !important;
-  color: #ffffff !important;
+  color: #000000 !important;
 }
 
 /* Dropdown items en blanc */
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary.min-vh-100 .dropdown-menu a.dropdown-item {
-  color: #ffffff !important;
+  color: #000000 !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -407,7 +407,7 @@ body {
   background-size: cover;
   /* Si tu veux un filtre fondu pour mieux voir le contenu */
   /* Tu peux aussi ajouter un overlay dans le HTML */
-  color: white; /* Ajuste la couleur du texte */
+  color: rgb(0, 0, 0); /* Ajuste la couleur du texte */
   font-family: 'Orbitron', sans-serif; /* Si tu utilises cette police */
   min-height: 100vh;
   margin: 0;
@@ -416,14 +416,14 @@ body {
 /* Forcer la transparence de la sidebar */
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary {
   background-color: rgba(0, 0, 0, 0.5) !important; /* fond noir transparent à 50% */
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
   backdrop-filter: blur(10px); /* effet flou glassmorphisme */
   border-radius: 0 15px 15px 0;
 }
 
 /* Liens dans la navbar */
 .d-flex.flex-column.flex-shrink-0.p-3.bg-body-tertiary a.nav-link {
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
 }
 
 /* Hover sur les liens */
@@ -431,91 +431,4 @@ body {
   color: #38bdf8 !important; /* bleu clair au survol */
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-}
-.presentation-sio {
-  max-width: 900px;
-  margin: 4rem auto;
-  padding: 2rem 3rem;
-  background: rgba(5, 10, 20, 0.95);
-  border-radius: 24px;
-  box-shadow: 0 0 50px #1f8ef1cc;
-  font-family: 'Orbitron', 'Poppins', sans-serif;
-  color: #66b0ff;
-  letter-spacing: 0.05em;
-}
-
-.sio-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.neon-text h2 {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #1f8ef1;
-  text-shadow:
-    0 0 15px #1f8ef1,
-    0 0 30px #1f8ef1cc,
-    0 0 60px #1f8ef1ff;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.1em;
-}
-
-.subtitle {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #a0cfffcc;
-  font-style: italic;
-}
-
-.sio-content {
-  background: linear-gradient(135deg, #0b1f40dd, #12355bcc);
-  border: 2px solid #1f8ef1;
-  padding: 2.5rem 3rem;
-  border-radius: 20px;
-  box-shadow:
-    0 0 25px #1f8ef1cc,
-    inset 0 0 15px #1f8ef199;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sio-content:hover,
-.sio-content:focus {
-  transform: scale(1.05);
-  box-shadow:
-    0 0 60px #1f8ef1ff,
-    inset 0 0 25px #1f8ef1cc;
-  outline: none;
-}
-
-.sio-content h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #4ea1ff;
-  margin-bottom: 1rem;
-  letter-spacing: 0.05em;
-  text-shadow: 0 0 8px #4ea1ffaa;
-}
-
-.sio-content p,
-.sio-content ul {
-  font-size: 1.2rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  color: #a8cfff;
-}
-
-.sio-content ul {
-  padding-left: 1.2rem;
-  list-style-type: disc;
-}
-
-.sio-content ul li {
-  margin-bottom: 0.8rem;
-  font-weight: 600;
-  color: #78aaff;
-}
-
-.sio-content ul li strong {
-  color: #c2e0ff;
 }
